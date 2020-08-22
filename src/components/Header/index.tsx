@@ -1,5 +1,6 @@
 import React from 'react';
 
+/** Usamos o Link para criar nossos links do nosso Header, dentro da tag 'nav' */
 import { Link } from 'react-router-dom';
 
 import { Container } from './styles';
@@ -15,9 +16,10 @@ const Header: React.FC<HeaderProps> = ({ size = 'large' }: HeaderProps) => (
     <header>
       <img src={Logo} alt="GoFinances" />
       <nav>
-        {
-          // Todo
-        }
+        {/** Link que redireciona para nosso 'Dashboard' */}
+        <Link to="/">Listagem</Link>
+        {/** Link que redireciona para a página 'import' */}
+        <Link to="/import">Importar</Link>
       </nav>
     </header>
   </Container>
